@@ -1,1 +1,0 @@
-# Clase base de personaje
