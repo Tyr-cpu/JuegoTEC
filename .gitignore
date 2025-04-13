@@ -1,0 +1,40 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Caches
+*.log
+*.pot
+*.pyc
+*.pyo
+
+# Virtual environments
+env/
+venv/
+ENV/
+env.bak/
+
+# Ursina specific
+*.blend1
+*.blend2
+*.db
+*.obj~
+*.mtl~
+*.bam
+*.egg
+*.psd
+*.tmp
+
+# OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# VS Code
+.vscode/
+
+# PyInstaller
+dist/
+build/
+*.spec
