@@ -57,6 +57,3 @@ git push origin tu-rama
 - Mantener carpetas y nombres organizados
 - Hacer `pull` antes de empezar a trabajar cada día
 
----
-
-¡Gracias por colaborar y hacer este proyecto genial!
