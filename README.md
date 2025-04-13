@@ -20,7 +20,7 @@ laberinto3d/
 ### 1. Clonar el repositorio
 
 ```bash
-git clone https://github.com/tu_usuario/laberinto3d.git
+git clone https://github.com/Tyr-cpu/JuegoTEC
 cd laberinto3d
 ```
 
