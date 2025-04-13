@@ -2,53 +2,68 @@ from ursina import *
 
 def mostrar_menu():
     app = Ursina()
-    aspect_ratio = window.aspect_ratio
     opcion_elegida = None
 
-    # Intentar cargar la textura
+    # Imagen de fondo
     ruta = 'assets/texturas/fondo_menu2.png'
-
     textura = load_texture(ruta)
-
     if not textura:
-        print(f"❌ No se pudo cargar la textura: {ruta}")
+        print("❌ No se cargó la textura del fondo.")
     else:
-        print(f"✅ Textura cargada correctamente: {ruta}")
+        print("✅ Fondo cargado correctamente.")
 
-    # Funciones de los botones
+    # Fondo (pantalla completa)
+    fondo = Entity(
+        model='quad',
+        texture=textura,
+        scale=(16, 9),  # 16:9 para que se vea bien centrado
+        parent=scene
+    )
+
+    # Funciones de botón
     def jugar():
         nonlocal opcion_elegida
         opcion_elegida = 'jugar'
-        destroy(menu_ui)
         app.userExit()
 
     def creditos():
         nonlocal opcion_elegida
         opcion_elegida = 'creditos'
-        destroy(menu_ui)
         app.userExit()
 
     def salir():
         application.quit()
 
-    # Crear menú
-    menu_ui = Entity()
+    # Botones invisibles (alineados con los botones dibujados en la imagen)
+    botones = []
 
-    # Fondo (si no se carga la imagen, usará un color por defecto)
-    fondo = Entity(
-        model='quad',
-        texture=textura if textura else None,
-        color=color.azure if not textura else color.white,
-        scale=(aspect_ratio * 9, 9),
-        parent=menu_ui
-    )
+    botones.append(Button(
+        text='',
+        color=color.clear,
+        scale=(0.35, 0.10),
+        position=(-0.501, -0.40),
+        on_click=jugar
+    ))
 
-    # Botones
-    Button(text='Jugar', scale=(0.4, 0.1), y=0.2, on_click=jugar, parent=menu_ui)
-    Button(text='Créditos', scale=(0.4, 0.1), y=0.0, on_click=creditos, parent=menu_ui)
-    Button(text='Salir', scale=(0.4, 0.1), y=-0.2, on_click=salir, parent=menu_ui)
+    botones.append(Button(
+        text='',
+        color=color.clear,
+        scale=(0.35, 0.10),
+        position=(0.00, -0.40),
+        on_click=creditos
+    ))
 
-    # Ejecutar menú
+    botones.append(Button(
+        text='',
+        color=color.clear,
+        scale=(0.35, 0.10),
+        position=(0.505, -0.40),
+        on_click=salir
+    ))
+
+    # Para ayudarte a ver dónde están, podés ponerle color temporal:
+    # for b in botones: b.color = color.rgba(255,0,0,100)
+
     app.run()
 
     return opcion_elegida
