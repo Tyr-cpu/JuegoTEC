@@ -1,18 +1,40 @@
-# Laberinto 3D Escolar - Proyecto en Python
+# 🎮 JuegoTEC
 
-Este es un juego 3D en desarrollo en equipo, basado en un laberinto de 3 plantas inspirado en un edificio escolar. Está hecho con Python y **Ursina Engine**.
+JuegoTEC es un videojuego 3D ambientado en un laberinto dentro de un edificio escolar de 3 plantas. Fue desarrollado por un equipo de 5 personas como proyecto académico. El objetivo del juego es explorar el edificio, esquivar enemigos, recolectar llaves, abrir puertas y llegar al último piso para ganar. Está hecho con Python y **Ursina Engine**.
 
-## Estructura del Proyecto
+---
 
-```
-laberinto3d/
-├── main.py                     # Inicio del juego
-├── assets/                     # Modelos, texturas y sonidos
-├── engine/                     # Motor y gestión de escenas
-├── escenas/                    # Menús, selección y juego
-├── personajes/                # Clases de personajes
-├── enemigos/                  # Clases de enemigos
-├── objetos/                   # Llaves, cofres, puertas
+## 🚀 Características principales
+
+- ✅ Menú principal con navegación completa (Inicio, Créditos, Salir)
+- 🎭 Selección de personajes antes de comenzar a jugar
+- 🔑 Cofres, llaves y puertas para progresar entre plantas
+- 🧠 Enemigos con IA básica que patrullan o persiguen
+- 🗺️ Mapas 3D representando los 3 pisos del edificio escolar
+- 🧍 Jugador con animaciones y detección de colisiones
+- 🎧 Sonido ambiental y efectos por evento (cofres, pasos, victoria, etc.)
+- 🏆 Pantalla de victoria o derrota al finalizar el juego
+
+---
+
+## 🧩 Estructura del proyecto
+
+```bash
+JuegoTEC/
+│
+├── main.py                  # Punto de entrada del juego
+├── menu/                   # Menús, selección de personaje, transiciones
+├── entidades/              # Clases base de jugador y enemigos
+├── personajes/             # Lógica y animaciones del jugador
+├── enemigos/               # IA de enemigos y comportamiento
+├── objetos/                # Cofres, llaves y puertas
+├── logica/                 # Control del nivel, estado del juego
+├── mapas/                  # Mapas 3D de cada planta del edificio
+├── assets/
+│   └── modelos/            # Modelos 3D importados (Blender, etc.)
+├── sonido/                 # Música y efectos
+├── README.md               # Este archivo
+├── CONTRIB.md              # Guía para colaborar en equipo
 ```
 
 ## Cómo comenzar
