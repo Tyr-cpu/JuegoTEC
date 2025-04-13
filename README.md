@@ -37,6 +37,17 @@ JuegoTEC/
 ├── CONTRIB.md              # Guía para colaborar en equipo
 ```
 
+## 👥 Equipo de desarrollo
+Bryan – Menú y navegación + Integración general
+
+Persona 2 – Jugador y entidades comunes
+
+Persona 3 – Enemigos e inteligencia artificial
+
+Persona 4 – Objetos y lógica del laberinto
+
+Persona 5 – Modelado 3D, colisiones y sonido
+
 ## Cómo comenzar
 
 ### 1. Clonar el repositorio
